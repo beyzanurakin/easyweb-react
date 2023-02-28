@@ -1,14 +1,9 @@
-import { Box, IconButton, Typography, useTheme } from '@mui/material'
-import React from 'react'
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
-import Select from 'react-select'
+import { Box, Typography } from '@mui/material';
+import React from 'react';
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 
 function ProSidebar() {
-  const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-  ]
+
   return (
     <div>
       <Box height='100vh'>
@@ -16,8 +11,7 @@ function ProSidebar() {
           sx={{ p: 3 }}
           display='flex'
           justifyContent='space-evenly'
-          alignItems='center'
-        >
+          alignItems='center'>
           <img
             alt='profile-user'
             width='16px'
@@ -26,17 +20,13 @@ function ProSidebar() {
             style={{ cursor: 'pointer' }}
           />
           <Typography
-            sx={{ color: '#4B465C', fontSize: '24px', fontWeight: 700 }}
-          >
+            sx={{ color: '#4B465C', fontSize: '24px', fontWeight: 700 }}>
             Kolay Web
           </Typography>
         </Box>
         <Sidebar height='100vh'>
           <Menu height='100%'>
-            {' '}
-            <Box>
-              <Select options={options} />
-            </Box>
+            <MenuItem> Paratik.net </MenuItem>
             <SubMenu label='Web Site Denetimi'>
               <MenuItem> Genel Bakış </MenuItem>
               <MenuItem> Sorun Raporu </MenuItem>
@@ -50,7 +40,7 @@ function ProSidebar() {
         </Sidebar>
       </Box>
     </div>
-  )
+  );
 }
 
-export default ProSidebar
+export default ProSidebar;

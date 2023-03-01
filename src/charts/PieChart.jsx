@@ -50,7 +50,7 @@ function PieChart() {
         series={paramaters.series}
         type='donut'
         height={150}
-        width={350}
+        width={300}
       />
     </div>
   );

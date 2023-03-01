@@ -33,6 +33,7 @@ function BarChart() {
           distributed: true,
           borderRadius: 8,
           borderRadiusApplication: 'end',
+          
         },
       },
       tooltip: {
@@ -50,7 +51,7 @@ function BarChart() {
         series={parameters.series}
         type='bar'
         height={150}
-        width={350}
+        width={300}
       />
     </div>
   );

@@ -11,6 +11,13 @@ function LineChart() {
     ],
     options: {
       chart: {
+        toolbar: {
+          show: false,
+        },
+        sparkline: {
+          enabled: true,
+        },
+        background: 'none',
         height: 350,
         type: 'line',
         zoom: {
@@ -30,6 +37,11 @@ function LineChart() {
           opacity: 0.5,
         },
       },
+      yaxis: {
+        labels: {
+          show: false,
+        },
+      },
       xaxis: {
         categories: [
           'Jan',
@@ -42,6 +54,9 @@ function LineChart() {
           'Aug',
           'Sep',
         ],
+        labels: {
+          show: false,
+        },
       },
       fill: {
         type: 'gradient',
@@ -65,7 +80,7 @@ function LineChart() {
         series={paramaters.series}
         type='line'
         height={150}
-        width={350}
+        width={300}
       />
     </div>
   );

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
 import { Progress } from 'reactstrap';
 
-function StackedBarChart() {
+function StackedBar({ title,values }) {
   const [parameters, setParamaters] = useState({
     series: [
-    
       {
         name: 'Striking Calf',
         data: [53, 32, 33],
@@ -64,13 +62,13 @@ function StackedBarChart() {
   });
   return (
     <div>
-      <div className='text-center'>Plain</div>
+      <div className='text-start'>{title}</div>
       <Progress multi>
-        <Progress bar color='success' value='92' />
-        <Progress bar color='warning' value='6' />
-        <Progress bar color='danger' value='2' />
+        <Progress bar color='success' value={values[0]} />
+        <Progress bar color='warning' value={values[1]} />
+        <Progress bar color='danger' value={values[2]} />
       </Progress>
     </div>
   );
 }
-export default StackedBarChart;
+export default StackedBar;

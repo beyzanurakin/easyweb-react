@@ -64,7 +64,7 @@ function AreaChart() {
         series={parameters.series}
         type='area'
         height={150}
-        width={350}
+        width={300}
       />
     </div>
   );

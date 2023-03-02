@@ -8,17 +8,13 @@ import {
   CardBody,
   CardText,
   ButtonGroup,
-  TabContent,
-  TabPane,
 } from 'reactstrap';
-import { Outlet, NavLink as Link, NavLink } from 'react-router-dom';
+import { Outlet, NavLink as Link } from 'react-router-dom';
 
 function IssueReport() {
   const [active, setActive] = useState('1');
 
-  const toggle = (tab) => {
-    setActive(tab);
-  };
+
   return (
     <div>
       <Row className='match-height gy-4'>

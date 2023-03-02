@@ -5,10 +5,9 @@ import {
   Container,
   Row,
   Col,
-  ButtonGroup,
   TabContent,
 } from 'reactstrap';
-import { Outlet, NavLink as Link, NavLink } from 'react-router-dom';
+import { Outlet, NavLink as Link} from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 function Dashboard() {
@@ -19,11 +18,7 @@ function Dashboard() {
   useEffect(() => {
     setTimeout(() => setDisplay(true), 2);
   }, []);
-  let activeStyle = {
-    textDecoration: 'underline',
-  };
 
-  let activeClassName = 'underline';
 
   if (!display) {
     return <></>;

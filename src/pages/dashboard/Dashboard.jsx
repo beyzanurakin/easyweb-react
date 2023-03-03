@@ -6,8 +6,10 @@ import {
   Row,
   Col,
   TabContent,
+  Card,
+  CardBody,
 } from 'reactstrap';
-import { Outlet, NavLink as Link} from 'react-router-dom';
+import { Outlet, NavLink as Link } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 
 function Dashboard() {
@@ -19,7 +21,6 @@ function Dashboard() {
     setTimeout(() => setDisplay(true), 2);
   }, []);
 
-
   if (!display) {
     return <></>;
   }
@@ -29,50 +30,50 @@ function Dashboard() {
         <Container className='my-3'>
           <Row className='match-height gy-4'>
             <Col sm='12'>
-             
-                <Nav pills>
-                  <NavItem>
-                    <Link
-                      to='/overview'
-                      active={active === '1'}
-                      className='nav-link'>
-                      Genel Bakış
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link
-                      to='/issue-report'
-                      active={active === '1'}
-                      className='nav-link'>
-                      Sorun Raporu
-                    </Link>
-                  </NavItem>
+              <Card>
+                <CardBody className='py-2 px-2'>
+                  <Nav pills>
+                    <NavItem>
+                      <Link
+                        to='/overview'
+                        active={active === '1'}
+                        className='nav-link'>
+                        Genel Bakış
+                      </Link>
+                    </NavItem>
+                    <NavItem>
+                      <Link
+                        to='/issue-report'
+                        active={active === '1'}
+                        className='nav-link'>
+                        Sorun Raporu
+                      </Link>
+                    </NavItem>
 
-                  <NavItem>
-                    <Link
-                      to='/scanned-pages'
-                      active={active === '1'}
-                      className='nav-link'>
-                      Taranan Sayfalar
-                    </Link>
-                  </NavItem>
-                  <NavItem>
-                    <Link
-                      to='/scan-comparison'
-                      active={active === '1'}
-                      className='nav-link'>
-                      Taranan Sayfalar
-                    </Link>
-                  </NavItem>
-                </Nav>
-             
+                    <NavItem>
+                      <Link
+                        to='/scanned-pages'
+                        active={active === '1'}
+                        className='nav-link'>
+                        Taranan Sayfalar
+                      </Link>
+                    </NavItem>
+                    <NavItem>
+                      <Link
+                        to='/scan-comparison'
+                        active={active === '1'}
+                        className='nav-link'>
+                        Tarama Karşılaştırması
+                      </Link>
+                    </NavItem>
+                  </Nav>
+                </CardBody>
+              </Card>
             </Col>
           </Row>
         </Container>
         <Container>
-          <TabContent className='py-50' activeTab={active}>
             <Outlet />
-          </TabContent>
         </Container>
       </Scrollbars>
     </div>

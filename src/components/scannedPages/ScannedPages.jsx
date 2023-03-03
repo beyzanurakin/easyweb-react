@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import { BiAperture } from 'react-icons/bi';
 
@@ -42,42 +42,60 @@ const columns = [
     name: 'URL(500)',
     width: '40%',
     textAlign: 'start',
+
     cell: (row) => (
       <td className='text-start'>
-        <BiAperture size='24px' color='blue' />
-        <span className='ms-3 fs-5'>{row.url}</span>
+        <BiAperture size='24px' color='#2B66BD' />
+        <span data-tag='allowRowEvents' className='ms-3 fs-5'>
+          {row.url}
+        </span>
       </td>
     ),
   },
   {
     name: 'YÖNLENDİRİLEN SAYFALAR',
     width: '10',
-    cell: (row) => <td>{row.referring_pages}</td>,
+    cell: (row) => <td data-tag='allowRowEvents'>{row.referring_pages}</td>,
   },
   {
     name: 'SORUNLAR',
     width: '10',
-    cell: (row) => <td>{row.issues}</td>,
+    cell: (row) => <td data-tag='allowRowEvents'>{row.issues}</td>,
   },
   {
     name: 'URL PROTOKOLÜ',
     width: '10',
-    cell: (row) => <td>{row.protocol}</td>,
+    cell: (row) => <td data-tag='allowRowEvents'>{row.protocol}</td>,
   },
   {
     name: 'SORUNLAR',
     width: '10',
-    cell: (row) => <td>{row.status_code}</td>,
+    cell: (row) => <td data-tag='allowRowEvents'>{row.status_code}</td>,
   },
 ];
 const customStyles = {
-  rows: {
-    style: {},
+  tableWrapper: {
+    style: {
+      display: 'table',
+    },
+  },
+  responsiveWrapper: {
+    style: {
+      border: '1px solid #DBDADE',
+      borderRadius: '4px 4px 0px 0px',
+    },
+  },
+  cells: {
+    style: {
+      padding: '12px',
+      fontSize: '13px', // override the cell padding for head cells
+    },
   },
   headCells: {
     style: {
-      paddingLeft: '8px', // override the cell padding for head cells
-      paddingRight: '8px',
+      padding: '12px', // override the cell padding for head cells
+      fontSize: '13px',
+      backgroundColor: '#DBDADE',
     },
   },
 };
@@ -129,48 +147,71 @@ const data = [
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
 ];
+const allFilters = ['all', 'errors', 'warnings', 'notifys', 'controls'];
 
 function ScannedPages() {
+  const [results, setResults] = useState(data);
+  const [filters, setFilters] = useState([allFilters]);
+
+  const filterResults = (filter) => {
+    if (filter === 'all') {
+      setResults(data);
+      return;
+    }
+    const newResults = results.filter((result) => result.filter === filter);
+    setResults(newResults);
+  };
   return (
-    <div>
-      <Row className='match-height my-4'>
+    <Fragment>
+      <Row className='match-height'>
         <Col sm='12'>
           <ButtonGroup>
-            <Nav pills>
-              <NavItem>
-                <NavLink active href='#'>
-                  Tümü
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Hatalar</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Uyarılar</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Bildirimler</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='#'>Geçilen Kontroller</NavLink>
-              </NavItem>
-            </Nav>
+            <Card>
+              <CardBody className='py-2 px-2'>
+                <Nav pills>
+                  <NavItem>
+                    <NavLink active href='#'>
+                      Tümü
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='#'>Button</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='#'>Uyarılar</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='#'>Bildirimler</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='#'>Geçilen Kontroller</NavLink>
+                  </NavItem>
+                </Nav>
+              </CardBody>
+            </Card>
           </ButtonGroup>
         </Col>
       </Row>
-
-      <Card>
-        <DataTable
-          columns={columns}
-          data={data}
-          expandableRows
-          expandableRowsComponent={ExpandedComponent}
-          customStyles={customStyles}
-          highlightOnHover
-          pointerOnHover
-        />
-      </Card>
-    </div>
+      <Row className='match-height my-3'>
+        <Col sm='12'>
+          <Card>
+            <CardBody>
+              <DataTable
+                fixedHeader
+                columns={columns}
+                data={data}
+                expandableRows
+                expandOnRowClicked='true'
+                expandableRowsComponent={ExpandedComponent}
+                customStyles={customStyles}
+                highlightOnHover
+                expandableRowsHideExpander
+              />
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </Fragment>
   );
 }
 

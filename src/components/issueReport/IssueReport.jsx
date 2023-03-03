@@ -14,7 +14,6 @@ import { Outlet, NavLink as Link } from 'react-router-dom';
 function IssueReport() {
   const [active, setActive] = useState('1');
 
-
   return (
     <div>
       <Row className='match-height gy-4'>
@@ -61,48 +60,52 @@ function IssueReport() {
       <Row className='match-height my-4'>
         <Col sm='12'>
           <ButtonGroup>
-            <Nav pills>
-              <NavItem>
-                <Link
-                  to='/issue-report/all'
-                  active={active === '1'}
-                  className='nav-link'>
-                  Tümü
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
-                  to='/issue-report/errors'
-                  active={active === '1'}
-                  className='nav-link'>
-                  Hatalar
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
-                  to='/issue-report/warnings'
-                  active={active === '1'}
-                  className='nav-link'>
-                  Uyarılar
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
-                  to='/issue-report/notifys'
-                  active={active === '1'}
-                  className='nav-link'>
-                  Bildirimler
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
-                  to='/issue-report/controls'
-                  active={active === '1'}
-                  className='nav-link'>
-                  Geçilen Kontroller
-                </Link>
-              </NavItem>
-            </Nav>
+            <Card>
+              <CardBody className='py-2 px-2'>
+                <Nav pills>
+                  <NavItem>
+                    <Link
+                      to='/issue-report/all'
+                      active={active === '1'}
+                      className='nav-link'>
+                      Tümü
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link
+                      to='/issue-report/errors'
+                      active={active === '1'}
+                      className='nav-link'>
+                      Hatalar
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link
+                      to='/issue-report/warnings'
+                      active={active === '1'}
+                      className='nav-link'>
+                      Uyarılar
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link
+                      to='/issue-report/notifys'
+                      active={active === '1'}
+                      className='nav-link'>
+                      Bildirimler
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link
+                      to='/issue-report/controls'
+                      active={active === '1'}
+                      className='nav-link'>
+                      Geçilen Kontroller
+                    </Link>
+                  </NavItem>
+                </Nav>
+              </CardBody>
+            </Card>
           </ButtonGroup>
         </Col>
       </Row>

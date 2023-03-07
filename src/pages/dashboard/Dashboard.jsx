@@ -5,7 +5,6 @@ import {
   Container,
   Row,
   Col,
-  TabContent,
   Card,
   CardBody,
 } from 'reactstrap';

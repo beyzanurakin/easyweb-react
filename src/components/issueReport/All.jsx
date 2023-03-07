@@ -226,13 +226,13 @@ function All() {
                                 Evde Pipet Paketleme İşi - Ayda 4.
                               </p>
                             </div>
-                            <a href='' className='my-3'>
+                            <a href='/' className='my-3'>
                               https://finansko.com/evde-pipet-paketleme-isi/
                             </a>
                           </td>
                           <td colSpan='2'>
                             <Badge color='warning'>301</Badge>
-                            <a href=''>https://paratik.net/hakkimizda</a>
+                            <a href='/'>https://paratik.net/hakkimizda</a>
                           </td>
                         </tr>
                       </UncontrolledCollapse>

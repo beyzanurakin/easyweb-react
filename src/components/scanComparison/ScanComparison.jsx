@@ -1,17 +1,6 @@
 import React, { Fragment } from 'react';
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  CardTitle,
-  Table,
-  Row,
-  Col,
-  ListGroup,
-  ListGroupItem,
-} from 'reactstrap';
+import { Card, CardBody, Table } from 'reactstrap';
 import RadialBar from '../../charts/RadialBar';
-import { RiMedicineBottleLine } from 'react-icons/ri';
 import {
   TbMedicineSyrup,
   TbShield,

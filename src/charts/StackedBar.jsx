@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Progress } from 'reactstrap';
 
-function StackedBar({ title,values }) {
+function StackedBar({ title, values }) {
   const [parameters, setParamaters] = useState({
     series: [
       {

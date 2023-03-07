@@ -5,7 +5,6 @@ import { BiAperture } from 'react-icons/bi';
 import {
   Card,
   CardBody,
-  CardText,
   Row,
   Col,
   NavLink,
@@ -14,6 +13,7 @@ import {
   NavItem,
   Table,
 } from 'reactstrap';
+
 const ExpandedComponent = ({ data }) => (
   <Table striped bordered className='p-3'>
     <thead>
@@ -30,7 +30,7 @@ const ExpandedComponent = ({ data }) => (
       <tr>
         <td>3XX yönlendirme sayfalarına dahili bağlantılar</td>
         <td>
-          <a href=''>{data.external_3xx_referring}</a>
+          <a href='/'>{data.external_3xx_referring}</a>
         </td>
       </tr>
     </tbody>
@@ -151,7 +151,6 @@ const allFilters = ['all', 'errors', 'warnings', 'notifys', 'controls'];
 
 function ScannedPages() {
   const [results, setResults] = useState(data);
-  const [filters, setFilters] = useState([allFilters]);
 
   const filterResults = (filter) => {
     if (filter === 'all') {

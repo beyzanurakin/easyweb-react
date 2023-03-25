@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function BarChart() {
   const [parameters, setParamaters] = useState({
@@ -33,7 +33,6 @@ function BarChart() {
           distributed: true,
           borderRadius: 8,
           borderRadiusApplication: 'end',
-          
         },
       },
       tooltip: {
@@ -43,7 +42,7 @@ function BarChart() {
         type: 'numeric',
       },
     },
-  });
+  })
   return (
     <div className='py-3'>
       <Chart
@@ -51,10 +50,10 @@ function BarChart() {
         series={parameters.series}
         type='bar'
         height={150}
-        width={300}
+        width={150}
       />
     </div>
-  );
+  )
 }
 
-export default BarChart;
+export default BarChart

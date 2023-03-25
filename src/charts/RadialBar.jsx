@@ -1,8 +1,10 @@
-import React from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function RadialBar() {
-  const options = {
+  const [parameters, setParamaters] = useState({
+    series: [80],
+    options: {
       chart: {
         sparkline: {
           enabled: true,
@@ -62,13 +64,18 @@ function RadialBar() {
         },
       },
     },
-    series = [80];
+  })
 
   return (
     <div>
-      <Chart options={options} series={series} type='radialBar' height={150} />
+      <Chart
+        options={parameters.options}
+        series={parameters.series}
+        type='radialBar'
+        height={150}
+      />
     </div>
-  );
+  )
 }
 
-export default RadialBar;
+export default RadialBar

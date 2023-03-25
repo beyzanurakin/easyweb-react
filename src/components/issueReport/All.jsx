@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import ScrollSpy from 'react-ui-scrollspy';
+import React, { Fragment } from 'react'
+import { Container, Row, Col } from 'reactstrap'
+import ScrollSpy from 'react-ui-scrollspy'
 import {
   List,
   Card,
@@ -10,18 +10,18 @@ import {
   CardTitle,
   CardHeader,
   Badge,
-} from 'reactstrap';
-import { FaChevronRight } from 'react-icons/fa';
+} from 'reactstrap'
+import { FaChevronRight } from 'react-icons/fa'
 import {
   RiErrorWarningLine,
   RiCloseCircleLine,
   RiCheckboxCircleLine,
-} from 'react-icons/ri';
+} from 'react-icons/ri'
 
 function All() {
   return (
     <Fragment>
-      <Container>
+      <Container fluid>
         <Row>
           <Col sm='4'>
             <List type='unstyled'>
@@ -134,7 +134,8 @@ function All() {
                       id='toggler1'
                       style={{
                         marginBottom: '1rem',
-                      }}>
+                      }}
+                    >
                       <td>
                         <RiCheckboxCircleLine size='25px' color='green' />
                         <span className='align-middle fw-bold ms-3'>
@@ -160,7 +161,8 @@ function All() {
                       id='toggler2'
                       style={{
                         marginBottom: '1rem',
-                      }}>
+                      }}
+                    >
                       <td>
                         <RiCheckboxCircleLine size='25px' color='green' />
                         <span className='align-middle fw-bold ms-3'>
@@ -203,7 +205,8 @@ function All() {
                       id='toggler3'
                       style={{
                         marginBottom: '1rem',
-                      }}>
+                      }}
+                    >
                       <td>
                         <RiCheckboxCircleLine size='25px' color='green' />
                         <span className='align-middle fw-bold ms-3'>
@@ -245,7 +248,7 @@ function All() {
         </Row>
       </Container>
     </Fragment>
-  );
+  )
 }
 
-export default All;
+export default All

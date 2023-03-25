@@ -1,6 +1,9 @@
-import React, { Fragment, useState } from 'react';
-import DataTable from 'react-data-table-component';
-import { BiAperture } from 'react-icons/bi';
+import React, { Fragment, useState } from 'react'
+import DataTable from 'react-data-table-component'
+import { BiAperture } from 'react-icons/bi'
+import { Outlet, NavLink as Link } from 'react-router-dom'
+
+import ReactPaginate from 'react-paginate'
 
 import {
   Card,
@@ -12,7 +15,7 @@ import {
   ButtonGroup,
   NavItem,
   Table,
-} from 'reactstrap';
+} from 'reactstrap'
 
 const ExpandedComponent = ({ data }) => (
   <Table striped bordered className='p-3'>
@@ -35,7 +38,7 @@ const ExpandedComponent = ({ data }) => (
       </tr>
     </tbody>
   </Table>
-);
+)
 
 const columns = [
   {
@@ -72,7 +75,7 @@ const columns = [
     width: '10',
     cell: (row) => <td data-tag='allowRowEvents'>{row.status_code}</td>,
   },
-];
+]
 const customStyles = {
   tableWrapper: {
     style: {
@@ -98,11 +101,11 @@ const customStyles = {
       backgroundColor: '#DBDADE',
     },
   },
-};
+}
 
 const data = [
   {
-    url: 'http://twitter.com',
+    url: 'https://www.skyscanner.fr/',
     referring_pages: 2,
     issues: 19,
     protocol: 'No',
@@ -111,7 +114,7 @@ const data = [
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
   {
-    url: 'https://instagram.com',
+    url: 'https://www.skyscanner.fr/vols',
     referring_pages: 10,
     issues: 11,
     protocol: 'No',
@@ -120,7 +123,7 @@ const data = [
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
   {
-    url: 'https://whatsapp.com',
+    url: 'https://www.skyscanner.fr/cartevols/vols-tous-pays',
     referring_pages: 6,
     issues: 17,
     protocol: 'No',
@@ -129,7 +132,7 @@ const data = [
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
   {
-    url: 'https://guardian.co.uk',
+    url: 'https://www.skyscanner.fr/cartevols/vols-toutes-villes',
     referring_pages: 9,
     issues: 14,
     protocol: 'No',
@@ -138,7 +141,7 @@ const data = [
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
   {
-    url: 'https://whatsapp.com',
+    url: 'https://www.skyscanner.fr/cartevols',
     referring_pages: 6,
     issues: 11,
     protocol: 'No',
@@ -146,20 +149,21 @@ const data = [
     h1_error: '2023 Zara Çalışma Şartları | Zara Çalışan Maaş Bilgileri',
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
-];
-const allFilters = ['all', 'errors', 'warnings', 'notifys', 'controls'];
+]
+const allFilters = ['all', 'errors', 'warnings', 'notifys', 'controls']
 
 function ScannedPages() {
-  const [results, setResults] = useState(data);
+  const [results, setResults] = useState(data)
+  const [active, setActive] = useState('1')
 
   const filterResults = (filter) => {
     if (filter === 'all') {
-      setResults(data);
-      return;
+      setResults(data)
+      return
     }
-    const newResults = results.filter((result) => result.filter === filter);
-    setResults(newResults);
-  };
+    const newResults = results.filter((result) => result.filter === filter)
+    setResults(newResults)
+  }
   return (
     <Fragment>
       <Row className='match-height'>
@@ -169,21 +173,40 @@ function ScannedPages() {
               <CardBody className='py-2 px-2'>
                 <Nav pills>
                   <NavItem>
-                    <NavLink active href='#'>
+                    <Link
+                      to='/scanned-pages/all'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
                       Tümü
-                    </NavLink>
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink href='#'>Button</NavLink>
+                    <Link
+                      to='/scanned-pages/errors'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Hatalar
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink href='#'>Uyarılar</NavLink>
+                    <Link
+                      to='/scanned-pages/warnings'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Uyarılar
+                    </Link>
                   </NavItem>
                   <NavItem>
-                    <NavLink href='#'>Bildirimler</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='#'>Geçilen Kontroller</NavLink>
+                    <Link
+                      to='/scanned-pages/notifys'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Bildirimler
+                    </Link>
                   </NavItem>
                 </Nav>
               </CardBody>
@@ -207,11 +230,29 @@ function ScannedPages() {
                 expandableRowsHideExpander
               />
             </CardBody>
+            <div className='me-4 d-flex justify-content-end'>
+              <ReactPaginate
+                nextLabel='>'
+                pageCount={10}
+                breakLabel='...'
+                previousLabel='<'
+                pageRangeDisplayed={5}
+                marginPagesDisplayed={2}
+                activeClassName='active'
+                pageClassName='page-item'
+                breakClassName='page-item'
+                pageLinkClassName='page-link'
+                nextLinkClassName='page-link'
+                breakLinkClassName='page-link'
+                previousLinkClassName='page-link'
+                containerClassName='pagination react-paginate'
+              />
+            </div>
           </Card>
         </Col>
       </Row>
     </Fragment>
-  );
+  )
 }
 
-export default ScannedPages;
+export default ScannedPages

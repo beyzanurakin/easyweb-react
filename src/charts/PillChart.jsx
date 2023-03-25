@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function PillChart() {
   const [parameters, setParamaters] = useState({
@@ -19,9 +19,8 @@ function PillChart() {
     ],
     options: {
       chart: {
-
-        sparkline:{
-          enabled:true,
+        sparkline: {
+          enabled: true,
         },
         height: 400,
         type: 'bar',
@@ -34,7 +33,7 @@ function PillChart() {
       plotOptions: {
         bar: {
           borderRadius: 2,
-          columnWidth: '15%',
+          columnWidth: '50%',
           colors: {
             backgroundBarColors: [
               '#FFFFFF',
@@ -90,7 +89,7 @@ function PillChart() {
         opposite: 'rtl',
       },
     },
-  });
+  })
   return (
     <div>
       <Chart
@@ -101,6 +100,6 @@ function PillChart() {
         width={300}
       />
     </div>
-  );
+  )
 }
-export default PillChart;
+export default PillChart

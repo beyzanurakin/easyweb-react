@@ -1,9 +1,9 @@
-import { Box, Typography } from '@mui/material';
-import React from 'react';
-import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import { Box, Typography } from '@mui/material'
+import React from 'react'
+import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
+import { Outlet, NavLink as Link } from 'react-router-dom'
 
 function ProSidebar() {
-
   return (
     <div>
       <Box height='100vh'>
@@ -11,7 +11,8 @@ function ProSidebar() {
           sx={{ p: 3 }}
           display='flex'
           justifyContent='space-evenly'
-          alignItems='center'>
+          alignItems='center'
+        >
           <img
             alt='profile-user'
             width='16px'
@@ -20,27 +21,36 @@ function ProSidebar() {
             style={{ cursor: 'pointer' }}
           />
           <Typography
-            sx={{ color: '#4B465C', fontSize: '24px', fontWeight: 700 }}>
+            sx={{ color: '#4B465C', fontSize: '24px', fontWeight: 700 }}
+          >
             Kolay Web
           </Typography>
         </Box>
         <Sidebar height='100vh'>
           <Menu height='100%'>
-            <MenuItem> Paratik.net </MenuItem>
             <SubMenu label='Web Site Denetimi'>
-              <MenuItem> Genel Bakış </MenuItem>
-              <MenuItem> Sorun Raporu </MenuItem>
-              <MenuItem> Taranan Sayfalar </MenuItem>
-              <MenuItem> Bulunan Kaynaklar </MenuItem>
-              <MenuItem> Bulunan Bağlantılar</MenuItem>
-              <MenuItem> Tarama Karşılaştırması </MenuItem>
-              <MenuItem> Sayfa Değişiklik İzleyicisi </MenuItem>
+              <MenuItem component={<Link to='/' className='nav-link' />}>
+                SEO
+              </MenuItem>
+              <MenuItem
+                component={<Link to='/optimization' className='nav-link' />}
+              >
+                Hız Optimizasyonu
+              </MenuItem>
+              <MenuItem
+                component={<Link to='/security' className='nav-liknk' />}
+              >
+                Güvenlik
+              </MenuItem>
+            </SubMenu>
+            <SubMenu label='Web Site İzleme'>
+              <MenuItem component={<Link to='/analytics' />}>Analitik</MenuItem>
             </SubMenu>
           </Menu>
         </Sidebar>
       </Box>
     </div>
-  );
+  )
 }
 
-export default ProSidebar;
+export default ProSidebar

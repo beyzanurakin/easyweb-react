@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Progress } from 'reactstrap';
+import React, { useState } from 'react'
+import { Progress } from 'reactstrap'
 
 function StackedBar({ title, values }) {
   const [parameters, setParamaters] = useState({
@@ -46,7 +46,7 @@ function StackedBar({ title, values }) {
       tooltip: {
         y: {
           formatter: function (val) {
-            return val + 'K';
+            return val + 'K'
           },
         },
       },
@@ -59,16 +59,16 @@ function StackedBar({ title, values }) {
         offsetX: 40,
       },
     },
-  });
+  })
   return (
     <div>
-      <div className='text-start'>{title}</div>
+      <h5 className='text-start'>{title}</h5>
       <Progress multi>
         <Progress bar color='success' value={values[0]} />
         <Progress bar color='warning' value={values[1]} />
         <Progress bar color='danger' value={values[2]} />
       </Progress>
     </div>
-  );
+  )
 }
-export default StackedBar;
+export default StackedBar

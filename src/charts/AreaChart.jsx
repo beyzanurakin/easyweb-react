@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function AreaChart() {
   const [parameters, setParamaters] = useState({
@@ -56,7 +56,7 @@ function AreaChart() {
         x: { show: false },
       },
     },
-  });
+  })
   return (
     <div>
       <Chart
@@ -64,9 +64,9 @@ function AreaChart() {
         series={parameters.series}
         type='area'
         height={150}
-        width={300}
+        width={150}
       />
     </div>
-  );
+  )
 }
-export default AreaChart;
+export default AreaChart

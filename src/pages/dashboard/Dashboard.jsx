@@ -1,82 +1,75 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Nav,
-  NavItem,
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-} from 'reactstrap';
-import { Outlet, NavLink as Link } from 'react-router-dom';
-import { Scrollbars } from 'react-custom-scrollbars';
+import React, { useState, useEffect } from 'react'
+import { Nav, NavItem, Container, Row, Col, Card, CardBody } from 'reactstrap'
+import { Outlet, NavLink as Link } from 'react-router-dom'
 
 function Dashboard() {
-  const [active, setActive] = useState('1');
+  const [active, setActive] = useState('1')
 
-  const [display, setDisplay] = useState(false);
+  const [display, setDisplay] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => setDisplay(true), 2);
-  }, []);
+    setTimeout(() => setDisplay(true), 2)
+  }, [])
 
   if (!display) {
-    return <></>;
+    return <></>
   }
   return (
     <div>
-      <Scrollbars style={{ width: '80vw', height: '100vh' }}>
-        <Container className='my-3'>
-          <Row className='match-height gy-4'>
-            <Col sm='12'>
-              <Card>
-                <CardBody className='py-2 px-2'>
-                  <Nav pills>
-                    <NavItem>
-                      <Link
-                        to='/overview'
-                        active={active === '1'}
-                        className='nav-link'>
-                        Genel Bakış
-                      </Link>
-                    </NavItem>
-                    <NavItem>
-                      <Link
-                        to='/issue-report'
-                        active={active === '1'}
-                        className='nav-link'>
-                        Sorun Raporu
-                      </Link>
-                    </NavItem>
+      <Container fluid className='my-3  mx-0'>
+        <Row className='match-height gy-4 '>
+          <Col sm='12'>
+            <Card>
+              <CardBody className='py-2 px-2'>
+                <Nav pills>
+                  <NavItem>
+                    <Link
+                      to='/overview'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Genel Bakış
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link
+                      to='/issue-report'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Sorun Raporu
+                    </Link>
+                  </NavItem>
 
-                    <NavItem>
-                      <Link
-                        to='/scanned-pages'
-                        active={active === '1'}
-                        className='nav-link'>
-                        Taranan Sayfalar
-                      </Link>
-                    </NavItem>
-                    <NavItem>
-                      <Link
-                        to='/scan-comparison'
-                        active={active === '1'}
-                        className='nav-link'>
-                        Tarama Karşılaştırması
-                      </Link>
-                    </NavItem>
-                  </Nav>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-        <Container>
-            <Outlet />
-        </Container>
-      </Scrollbars>
+                  <NavItem>
+                    <Link
+                      to='/scanned-pages'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Taranan Sayfalar
+                    </Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link
+                      to='/scan-comparison'
+                      active={active === '1'}
+                      className='nav-link'
+                    >
+                      Tarama Karşılaştırması
+                    </Link>
+                  </NavItem>
+                </Nav>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+      <Container fluid className='mx-0 w-100'>
+        <Outlet />
+      </Container>
     </div>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard

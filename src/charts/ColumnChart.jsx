@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function ColumnChart() {
   const [parameters, setParamaters] = useState({
@@ -34,7 +34,7 @@ function ColumnChart() {
       },
       dataLabels: {
         formatter: function (val) {
-          return val + '%';
+          return val + '%'
         },
         offsetY: -20,
         style: {
@@ -69,8 +69,8 @@ function ColumnChart() {
           fill: {
             type: 'gradient',
             gradient: {
-              colorFrom: '#D8E3F0',
-              colorTo: '#BED1E6',
+              colorFrom: '#192641',
+              colorTo: '#192641',
               stops: [0, 100],
               opacityFrom: 0.4,
               opacityTo: 0.5,
@@ -89,9 +89,9 @@ function ColumnChart() {
           show: false,
         },
         labels: {
-          show: false,
+          show: true,
           formatter: function (val) {
-            return val + '%';
+            return val + '%'
           },
         },
       },
@@ -105,7 +105,7 @@ function ColumnChart() {
         },
       },
     },
-  });
+  })
   return (
     <div>
       <Chart
@@ -116,6 +116,6 @@ function ColumnChart() {
         width={300}
       />
     </div>
-  );
+  )
 }
-export default ColumnChart;
+export default ColumnChart

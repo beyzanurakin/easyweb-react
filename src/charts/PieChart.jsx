@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function PieChart() {
   const [paramaters, setParamaters] = useState({
@@ -25,7 +25,7 @@ function PieChart() {
               value: {
                 offsetY: -15,
                 formatter(val) {
-                  return `${parseInt(val)} %`;
+                  return `${parseInt(val)} %`
                 },
               },
               total: {
@@ -33,7 +33,7 @@ function PieChart() {
                 offsetY: 15,
                 label: 'App',
                 formatter() {
-                  return '53%';
+                  return '53%'
                 },
               },
             },
@@ -41,7 +41,7 @@ function PieChart() {
         },
       },
     },
-  });
+  })
 
   return (
     <div>
@@ -50,10 +50,10 @@ function PieChart() {
         series={paramaters.series}
         type='donut'
         height={150}
-        width={300}
+        width={200}
       />
     </div>
-  );
+  )
 }
 
-export default PieChart;
+export default PieChart

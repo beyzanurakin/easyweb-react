@@ -1,12 +1,7 @@
-import React, { Fragment } from 'react';
-import { Card, CardBody, Table } from 'reactstrap';
-import RadialBar from '../../charts/RadialBar';
-import {
-  TbMedicineSyrup,
-  TbShield,
-  TbWifi,
-  TbFileSearch,
-} from 'react-icons/tb';
+import React, { Fragment } from 'react'
+import { Card, CardBody, Table } from 'reactstrap'
+import GreenRadialBar from '../../charts/GreenRadialBar'
+import { TbMedicineSyrup, TbShield, TbWifi, TbFileSearch } from 'react-icons/tb'
 
 function ScanComparison() {
   return (
@@ -31,10 +26,10 @@ function ScanComparison() {
                     <TbMedicineSyrup size='24px' /> Sağlık Puanı
                   </td>
                   <td>
-                    <RadialBar />
+                    <GreenRadialBar />
                   </td>
                   <td>
-                    <RadialBar />
+                    <GreenRadialBar />
                   </td>
                 </tr>
                 <tr>
@@ -169,7 +164,7 @@ function ScanComparison() {
         </CardBody>
       </Card>
     </Fragment>
-  );
+  )
 }
 
-export default ScanComparison;
+export default ScanComparison

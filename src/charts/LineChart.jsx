@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Chart from 'react-apexcharts';
+import React, { useState } from 'react'
+import Chart from 'react-apexcharts'
 
 function LineChart() {
   const [paramaters, setParamaters] = useState({
@@ -18,7 +18,7 @@ function LineChart() {
           enabled: true,
         },
         background: 'none',
-        height: 350,
+
         type: 'line',
         zoom: {
           enabled: false,
@@ -71,7 +71,7 @@ function LineChart() {
         },
       },
     },
-  });
+  })
 
   return (
     <div>
@@ -79,11 +79,9 @@ function LineChart() {
         options={paramaters.options}
         series={paramaters.series}
         type='line'
-        height={150}
-        width={300}
       />
     </div>
-  );
+  )
 }
 
-export default LineChart;
+export default LineChart

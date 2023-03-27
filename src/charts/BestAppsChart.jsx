@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
-import Chart from 'react-apexcharts'
+import ReactApexChart from 'react-apexcharts'
 
-function GreenRadialBar() {
+function BestAppsCharts() {
   const [parameters, setParamaters] = useState({
-    series: [75],
+    series: [83],
     options: {
-      labels: ['Çok iyi'],
+      labels: ['Çok İyi'],
       fill: {
         colors: ['#0DA000', '#FFFFFF'],
       },
-
       plotOptions: {
         radialBar: {
           dataLabels: {
@@ -36,7 +35,7 @@ function GreenRadialBar() {
   })
   return (
     <div>
-      <Chart
+      <ReactApexChart
         options={parameters.options}
         series={parameters.series}
         type='radialBar'
@@ -45,4 +44,4 @@ function GreenRadialBar() {
   )
 }
 
-export default GreenRadialBar
+export default BestAppsCharts

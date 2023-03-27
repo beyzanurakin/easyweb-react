@@ -22,7 +22,7 @@ function PillChart() {
         sparkline: {
           enabled: true,
         },
-        height: 400,
+
         type: 'bar',
         stacked: true,
         parentHeightOffset: 0,
@@ -96,8 +96,6 @@ function PillChart() {
         options={parameters.options}
         series={parameters.series}
         type='bar'
-        height={150}
-        width={300}
       />
     </div>
   )

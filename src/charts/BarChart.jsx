@@ -49,8 +49,6 @@ function BarChart() {
         options={parameters.options}
         series={parameters.series}
         type='bar'
-        height={150}
-        width={150}
       />
     </div>
   )

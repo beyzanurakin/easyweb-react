@@ -108,21 +108,21 @@ function Overview() {
                 <h4>Linkler</h4>
               </CardTitle>
               <StackedBar values={[35, 5, 20, 40]} />
-              <div className='mt-2'>
+              <div className='mt-4'>
                 <p>
-                  <BsFillCircleFill color='#14A44D' />
+                  <BsFillCircleFill className='me-3' color='#14A44D' />
                   No Follow
                 </p>
                 <p>
-                  <BsFillCircleFill color='#E4A11B' />
+                  <BsFillCircleFill className='me-3' color='#E4A11B' />
                   Dofollow
                 </p>
                 <p>
-                  <BsFillCircleFill color='#1F51FF' />
+                  <BsFillCircleFill className='me-3' color='#1F51FF' />
                   Noreferrer
                 </p>
                 <p>
-                  <BsFillCircleFill color='#7F00FF' />
+                  <BsFillCircleFill className='me-3' color='#7F00FF' />
                   Noopener
                 </p>
               </div>

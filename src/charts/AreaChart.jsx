@@ -12,7 +12,7 @@ function AreaChart() {
     options: {
       chart: {
         type: 'area',
-        height: 350,
+
         toolbar: {
           show: false,
         },
@@ -63,8 +63,6 @@ function AreaChart() {
         options={parameters.options}
         series={parameters.series}
         type='area'
-        height={150}
-        width={150}
       />
     </div>
   )

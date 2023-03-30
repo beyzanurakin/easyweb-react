@@ -10,6 +10,8 @@ import {
   CardHeader,
 } from 'reactstrap'
 
+import tn from './tn.png'
+
 import PerformanceChart from '../../charts/PerformanceChart'
 import AccessibilityChart from '../../charts/AccessibilityChart'
 import BestAppsChart from '../../charts/BestAppsChart'
@@ -19,6 +21,7 @@ import {
   RiErrorWarningLine,
   RiCloseCircleLine,
   RiCheckboxCircleLine,
+  RiExternalLinkFill,
 } from 'react-icons/ri'
 
 function Performance() {
@@ -153,16 +156,11 @@ function Performance() {
       </Row>
       <Row>
         <Col sm='12'>
-          <Card className='mb-3'>
-            <CardHeader>
-              <CardTitle tag='h5'>WEB SİTE GÜVENLİĞİ</CardTitle>
-            </CardHeader>
-            <Table bordered responsive>
+          <Card className='mb-3 p-5'>
+            <Table bordered>
               <thead>
                 <tr>
-                  <th className='col-sm-8 text-center'>SORUNLAR</th>
-                  <th className='col-sm-2 text-center'>SAYFALAR</th>
-                  <th className='col-sm-2 text-center'>ÇÖZÜM</th>
+                  <th>TEŞHİS</th>
                 </tr>
               </thead>
               <tbody>
@@ -173,25 +171,124 @@ function Performance() {
                     marginBottom: '1rem',
                   }}
                 >
-                  <td>
-                    <RiCheckboxCircleLine size='25px' color='green' />
+                  <td className='bg-light'>
+                    <BsFillCircleFill className='me-3' color='#FBB347' />
                     <span className='align-middle fw-bold ms-3'>
-                      XML site haritası
+                      Doğru boyuta sahip resimler
                     </span>
                   </td>
-                  <td className='text-center'>1</td>
-                  <td className='text-center'>2</td>
                 </tr>
                 <UncontrolledCollapse toggler='#toggler1'>
                   <Card>
                     <CardBody>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Nesciunt magni, voluptas debitis similique porro a
-                      molestias consequuntur earum odio officiis natus, amet
-                      hic, iste sed dignissimos esse fuga! Minus, alias.
+                      <Row>
+                        <Col sm='1' className='d-flex align-items-center'>
+                          <RiErrorWarningLine size='25px' color='yellow' />
+                        </Col>
+                        <Col sm='11'>
+                          {' '}
+                          Gerekli resim boyutlarının kullanılabilmesi için
+                          resimleri doğrudan medya kitaplığından yükleyin,
+                          ardından ideal resim boyutlarının kullanıldığından
+                          (esnek ayrılma noktası için olanlar dahil) emin olmak
+                          için resimleri medya kitaplığından ekleyin veya resim
+                          widget'ını kullanın. Boyutları kullanım için yeterli
+                          değilse `Full Size` resimler kullanmaktan kaçının.
+                        </Col>
+                      </Row>
                     </CardBody>
                   </Card>
+                  <Table bordered>
+                    <thead>
+                      <tr>
+                        <th style={{ width: '80%' }}>KOD KISMI</th>
+                        <th style={{ width: '10%' }}>KAYNAK BOYUTU</th>
+                        <th style={{ width: '10%' }}>POTANSİYEL TASARRUFLAR</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <Row>
+                            <Col
+                              sm='2'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <img src={tn} alt='logo' />
+                            </Col>
+                            <Col sm='9'>
+                              <p className='fw-bolder'>
+                                INSTAGRAMDA BUTİK AÇMAK
+                              </p>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nunc ut urna at lacus sagittis
+                                placerat ut et nulla. Fusce pulvinar et eros in
+                                laoreet. Nunc consequat, velit id dignissim
+                                pretium, lacus nulla scelerisque nunc, sit amet
+                                placerat nunc erat ut dui. Praesent in nibh
+                                elit. Curabitur bibendum vestibulum libero, sit
+                                amet luctus mauris feugiat volutpat. Sed
+                                porttitor nunc a cursus tristique. Duis vel
+                                ultricies augue. Vestibulum vitae lobortis nisi.
+                                Integer vitae enim nec turpis viverra luctus at
+                                et tortor.
+                              </p>
+                            </Col>
+                            <Col
+                              sm='1'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <RiExternalLinkFill />
+                            </Col>
+                          </Row>
+                        </td>
+                        <td>67,7 KB</td>
+                        <td>60,4 KB</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Row>
+                            <Col
+                              sm='2'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <img src={tn} alt='logo' />
+                            </Col>
+                            <Col sm='9'>
+                              <p className='fw-bolder'>
+                                INSTAGRAMDA BUTİK AÇMAK
+                              </p>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nunc ut urna at lacus sagittis
+                                placerat ut et nulla. Fusce pulvinar et eros in
+                                laoreet. Nunc consequat, velit id dignissim
+                                pretium, lacus nulla scelerisque nunc, sit amet
+                                placerat nunc erat ut dui. Praesent in nibh
+                                elit. Curabitur bibendum vestibulum libero, sit
+                                amet luctus mauris feugiat volutpat. Sed
+                                porttitor nunc a cursus tristique. Duis vel
+                                ultricies augue. Vestibulum vitae lobortis nisi.
+                                Integer vitae enim nec turpis viverra luctus at
+                                et tortor.
+                              </p>
+                            </Col>
+                            <Col
+                              sm='1'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <RiExternalLinkFill />
+                            </Col>
+                          </Row>
+                        </td>
+                        <td>67,7 KB</td>
+                        <td>60,4 KB</td>
+                      </tr>
+                    </tbody>
+                  </Table>
                 </UncontrolledCollapse>
+
                 <tr
                   color='primary'
                   id='toggler2'
@@ -199,24 +296,234 @@ function Performance() {
                     marginBottom: '1rem',
                   }}
                 >
-                  <td>
-                    <RiCheckboxCircleLine size='25px' color='green' />
+                  <td className='bg-light'>
+                    <BsFillCircleFill className='me-3' color='#A03A00' />
                     <span className='align-middle fw-bold ms-3'>
-                      Outdated security protocol version
+                      Resim öğelerinin açıkça belirtilmiş width ve height
+                      değerleri yok
                     </span>
                   </td>
-                  <td className='text-center'>1</td>
-                  <td className='text-center'>2</td>
                 </tr>
                 <UncontrolledCollapse toggler='#toggler2'>
                   <Card>
                     <CardBody>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Nesciunt magni, voluptas debitis similique porro a
-                      molestias consequuntur earum odio officiis natus, amet
-                      hic, iste sed dignissimos esse fuga! Minus, alias.
+                      <Row>
+                        <Col sm='1' className='d-flex align-items-center'>
+                          <RiErrorWarningLine size='25px' color='red' />
+                        </Col>
+                        <Col sm='11'>
+                          Düzen kaymalarını azaltıp CLS'yi iyileştirmek için
+                          görsel öğelerde genişliği ve yüksekliği açıkça
+                          belirtilmiş şekilde ayarlayın.
+                        </Col>
+                      </Row>
                     </CardBody>
                   </Card>
+                  <Table bordered>
+                    <thead>
+                      <tr>
+                        <th style={{ width: '80%' }}>KOD KISMI</th>
+                        <th style={{ width: '10%' }}>KAYNAK BOYUTU</th>
+                        <th style={{ width: '10%' }}>POTANSİYEL TASARRUFLAR</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <Row>
+                            <Col
+                              sm='2'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <img src={tn} alt='logo' />
+                            </Col>
+                            <Col sm='9'>
+                              <p className='fw-bolder'>
+                                INSTAGRAMDA BUTİK AÇMAK
+                              </p>
+                              <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Nunc ut urna at lacus sagittis
+                                placerat ut et nulla. Fusce pulvinar et eros in
+                                laoreet. Nunc consequat, velit id dignissim
+                                pretium, lacus nulla scelerisque nunc, sit amet
+                                placerat nunc erat ut dui. Praesent in nibh
+                                elit. Curabitur bibendum vestibulum libero, sit
+                                amet luctus mauris feugiat volutpat. Sed
+                                porttitor nunc a cursus tristique. Duis vel
+                                ultricies augue. Vestibulum vitae lobortis nisi.
+                                Integer vitae enim nec turpis viverra luctus at
+                                et tortor.
+                              </p>
+                            </Col>
+                            <Col
+                              sm='1'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <RiExternalLinkFill />
+                            </Col>
+                          </Row>
+                        </td>
+                        <td>67,7 KB</td>
+                        <td>60,4 KB</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </UncontrolledCollapse>
+
+                <tr
+                  color='primary'
+                  id='toggler3'
+                  style={{
+                    marginBottom: '1rem',
+                  }}
+                >
+                  <td className='bg-light'>
+                    <BsFillCircleFill className='me-3' color='#FBB347' />
+                    <span className='align-middle fw-bold ms-3'>
+                      Statik öğeleri verimli bir önbellek politikasıyla
+                      yayınlayın.
+                    </span>
+                  </td>
+                </tr>
+                <UncontrolledCollapse toggler='#toggler3'>
+                  <Card>
+                    <CardBody>
+                      <Row>
+                        <Col sm='1' className='d-flex align-items-center'>
+                          <RiErrorWarningLine size='25px' color='yellow' />
+                        </Col>
+                        <Col sm='11'>
+                          Uzun önbellek ömrü, sayfanızın tekrar ziyaret edilmesi
+                          sürecini hızlandırabilir.
+                        </Col>
+                      </Row>
+                    </CardBody>
+                  </Card>
+                  <Table bordered>
+                    <thead>
+                      <tr>
+                        <th style={{ width: '80%' }}>KOD KISMI</th>
+                        <th style={{ width: '10%' }} className='text-center'>
+                          TTL'Yİ ÖNBELLEĞE ALMA{' '}
+                        </th>
+                        <th style={{ width: '10%' }} className='text-center'>
+                          AKTARIM BOYUTU{' '}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <Row>
+                            <Col sm='11'>
+                              <p className='fw-bolder'>
+                                INSTAGRAMDA BUTİK AÇMAK
+                              </p>
+                              <p>
+                                <a href=' https://paratik.net/wp-content/uploads/2023/02/instagramda-butik-acmak-768x459.jpg.webp'>
+                                  {' '}
+                                  https://paratik.net/wp-content/uploads/2023/02/instagramda-butik-acmak-768x459.jpg.webp
+                                </a>
+                              </p>
+                            </Col>
+                            <Col
+                              sm='1'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <RiExternalLinkFill />
+                            </Col>
+                          </Row>
+                        </td>
+                        <td>67,7 KB</td>
+                        <td>60,4 KB</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Row>
+                            <Col sm='11'>
+                              <p className='fw-bolder'>
+                                INSTAGRAMDA BUTİK AÇMAK
+                              </p>
+                              <p>
+                                <a href=' https://paratik.net/wp-content/uploads/2023/02/instagramda-butik-acmak-768x459.jpg.webp'>
+                                  {' '}
+                                  https://paratik.net/wp-content/uploads/2023/02/instagramda-butik-acmak-768x459.jpg.webp
+                                </a>
+                              </p>
+                            </Col>
+                            <Col
+                              sm='1'
+                              className='d-flex justify-content-center align-items-center'
+                            >
+                              <RiExternalLinkFill />
+                            </Col>
+                          </Row>
+                        </td>
+                        <td>67,7 KB</td>
+                        <td>60,4 KB</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </UncontrolledCollapse>
+                <tr
+                  color='primary'
+                  id='toggler4'
+                  style={{
+                    marginBottom: '1rem',
+                  }}
+                >
+                  <td className='bg-light'>
+                    <BsFillCircleFill className='me-3' color='#A1A1A1' />
+                    <span className='align-middle fw-bold ms-3'>
+                      İstek sayısını az ve aktarma boyutlarını küçük tutun
+                    </span>
+                  </td>
+                </tr>
+                <UncontrolledCollapse toggler='#toggler4'>
+                  <Card>
+                    <CardBody>
+                      <Row>
+                        <Col sm='1' className='d-flex align-items-center'>
+                          <RiErrorWarningLine size='25px' color='yellow' />
+                        </Col>
+                        <Col sm='11'>
+                          Uzun önbellek ömrü, sayfanızın tekrar ziyaret edilmesi
+                          sürecini hızlandırabilir.
+                        </Col>
+                      </Row>
+                    </CardBody>
+                  </Card>
+                  <Table bordered>
+                    <thead>
+                      <tr>
+                        <th style={{ width: '80%' }}>KAYNAK TÜRÜ</th>
+                        <th style={{ width: '10%' }} className='text-center'>
+                          İSTEK SAYISI{' '}
+                        </th>
+                        <th style={{ width: '10%' }} className='text-center'>
+                          AKTARIM BOYUTU{' '}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className='fw-bold'>TOPLAM</td>
+                        <td className='text-center'>38</td>
+                        <td className='text-center'>855,7 KiB</td>
+                      </tr>
+                      <tr>
+                        <td className='fw-bold'>RESİM</td>
+                        <td className='text-center'>38</td>
+                        <td className='text-center'>855,7 KiB</td>
+                      </tr>
+                      <tr>
+                        <td className='fw-bold'>DÖKÜMAN</td>
+                        <td className='text-center'>1</td>
+                        <td className='text-center'>855,7 KiB</td>
+                      </tr>
+                    </tbody>
+                  </Table>
                 </UncontrolledCollapse>
               </tbody>
             </Table>

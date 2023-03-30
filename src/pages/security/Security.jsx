@@ -9,10 +9,18 @@ import {
   CardBody,
   CardTitle,
   Progress,
+  Table,
 } from 'reactstrap'
 import { Outlet, NavLink as Link } from 'react-router-dom'
 import SingleHeatChart from '../../charts/SingleHeatChart'
 import LifeLineChart from '../../charts/LifeLineChart'
+import {
+  RiErrorWarningLine,
+  RiCloseCircleLine,
+  RiCheckboxCircleLine,
+  RiExternalLinkFill,
+} from 'react-icons/ri'
+import HeatChart from '../../charts/HeatChart'
 
 function Security() {
   const [active, setActive] = useState('1')
@@ -40,9 +48,9 @@ function Security() {
         </Row>
       </Container>
       <Container fluid className='mx-0 w-100'>
-        <Row className='match-height gy-4 '>
+        <Row className='match-height gy-4 my-4'>
           <Col sm='8'>
-            <Card>
+            <Card className='mb-4'>
               <CardBody>
                 <CardTitle>
                   <h4>Günlük Durum</h4>
@@ -98,6 +106,108 @@ function Security() {
                   <h4>En Son Kesinti</h4>
                   <p>Arıza Süresi Kaydedilmedi.</p>
                 </CardTitle>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row className='match-height gy-4 my-4'>
+          <Col sm='12'>
+            <Card>
+              <CardBody>
+                <Table bordered className='mb-4'>
+                  <thead>
+                    <tr>
+                      <th>DEVAM EDEN OLAYLAR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <Table bordered>
+                        <thead>
+                          <tr>
+                            <th style={{ width: '70%' }}>OLAY</th>
+                            <th style={{ width: '15%' }}>TARİH</th>
+                            <th style={{ width: '15%' }}>YORUMLAR</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <Row>
+                              <Col sm='1'>
+                                <RiErrorWarningLine
+                                  size='25px'
+                                  color='yellow'
+                                />
+                              </Col>
+                              <Col sm='11'>Herhangi bir olay bulunmadı</Col>
+                            </Row>
+                          </tr>
+                        </tbody>
+                      </Table>
+                    </tr>
+                  </tbody>
+                </Table>
+                <Table bordered className='mb-4'>
+                  <thead>
+                    <tr>
+                      <th>DEVAM EDEN OLAYLAR</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <Table bordered>
+                        <thead>
+                          <tr>
+                            <th style={{ width: '70%' }}>OLAY</th>
+                            <th
+                              style={{ width: '15%' }}
+                              className='text-center'
+                            >
+                              TARİH
+                            </th>
+                            <th
+                              style={{ width: '15%' }}
+                              className='text-center'
+                            >
+                              YORUMLAR
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <Row className='d-flex align-items-center'>
+                                <Col sm='11'>
+                                  <p>INSTAGRAMDA BUTİK AÇMAK</p>
+                                  <a href='#'>
+                                    https://paratik.net/wp-content/uploads/2023/02/instagramda-butik-acmak-768x459.jpg.webp
+                                  </a>
+                                </Col>
+                                <Col sm='1'>
+                                  <RiExternalLinkFill />
+                                </Col>
+                              </Row>
+                            </td>
+                            <td className='text-center'>7D</td>
+                            <td className='text-center'>769 kib</td>
+                          </tr>
+                        </tbody>
+                      </Table>
+                    </tr>
+                  </tbody>
+                </Table>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm='7'>
+            <Card>
+              <CardBody>
+                <CardTitle>
+                  <h4>Haftalık Durum</h4>
+                </CardTitle>
+                <HeatChart />
               </CardBody>
             </Card>
           </Col>

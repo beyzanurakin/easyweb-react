@@ -24,6 +24,7 @@
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.0",
+    "react-syntax-highlighter": "^15.5.0",
     "react-ui-scrollspy": "^2.3.0",
     "reactstrap": "^9.1.6",
     "styled-components": "^5.3.8",

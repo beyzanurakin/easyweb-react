@@ -24,7 +24,7 @@ function Dashboard() {
                 <Nav pills>
                   <NavItem>
                     <Link
-                      to='/overview'
+                      to='/seo/overview'
                       active={active === '1'}
                       className='nav-link'
                     >
@@ -33,7 +33,7 @@ function Dashboard() {
                   </NavItem>
                   <NavItem>
                     <Link
-                      to='/issue-report'
+                      to='/seo/issue-report'
                       active={active === '1'}
                       className='nav-link'
                     >
@@ -43,7 +43,7 @@ function Dashboard() {
 
                   <NavItem>
                     <Link
-                      to='/scanned-pages'
+                      to='/seo/scanned-pages'
                       active={active === '1'}
                       className='nav-link'
                     >
@@ -52,7 +52,7 @@ function Dashboard() {
                   </NavItem>
                   <NavItem>
                     <Link
-                      to='/scan-comparison'
+                      to='/seo/scan-comparison'
                       active={active === '1'}
                       className='nav-link'
                     >

@@ -18,6 +18,7 @@ import Accessibility from './pages/optimization/Accessibility'
 import BestApps from './pages/optimization/BestApps'
 import Security from './pages/security/Security'
 import Analytics from './pages/analytics/Analytics'
+import Homepage from './pages/homepage/Homepage'
 
 function App() {
   return (
@@ -26,12 +27,15 @@ function App() {
       <main className='content'>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Dashboard />}>
-            <Route path='/' element={<Navigate replace to='overview' />} />
-            <Route path='/overview' element={<Overview />}></Route>
+          <Route path='/' element={<Navigate replace to='homepage' />} />
+          <Route path='/homepage' element={<Homepage />} />
+
+          <Route path='seo' element={<Dashboard />}>
+            <Route path='/seo' element={<Navigate replace to='overview' />} />
+            <Route path='overview' element={<Overview />}></Route>
             <Route path='issue-report' element={<IssueReport />}>
               <Route
-                path='/issue-report'
+                path='/seo/issue-report'
                 element={<Navigate replace to='all' />}
               />
               <Route path='all' element={<All />}></Route>
@@ -48,6 +52,7 @@ function App() {
             </Route>
             <Route path='scan-comparison' element={<ScanComparison />}></Route>
           </Route>
+
           <Route path='optimization' element={<Optimization />}>
             <Route
               path='/optimization'

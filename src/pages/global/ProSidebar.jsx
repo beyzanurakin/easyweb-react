@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
 import { Outlet, NavLink as Link } from 'react-router-dom'
+import { Form, Input } from 'reactstrap'
 
 function ProSidebar() {
   return (
@@ -26,10 +27,31 @@ function ProSidebar() {
             Kolay Web
           </Typography>
         </Box>
+        <Box>
+          <Form className='px-3'>
+            <Input className='mb-3' type='select'>
+              <option>Paratik.net</option>
+              <option>Nefiyat.net</option>
+            </Input>
+          </Form>
+        </Box>
         <Sidebar height='100vh'>
-          <Menu height='100%'>
+          <Menu
+            height='100%'
+            menuItemStyles={{
+              button: ({ level, active, disabled }) => {
+                // only apply styles on first level elements of the tree
+                if (level === 0)
+                  return {
+                    borderRadius: '15px',
+                    margin: '5px 10px',
+                    padding: '0px auto',
+                  }
+              },
+            }}
+          >
             <SubMenu label='Web Site Denetimi'>
-              <MenuItem component={<Link to='/' className='nav-link' />}>
+              <MenuItem component={<Link to='/seo' className='nav-link' />}>
                 SEO
               </MenuItem>
               <MenuItem

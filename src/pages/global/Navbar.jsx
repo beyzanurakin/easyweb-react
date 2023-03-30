@@ -10,42 +10,38 @@ import { IconButton } from '@mui/material'
 
 function Navbar() {
   return (
-    <Box display='flex' justifyContent='space-between' p={2}>
-      {/* SEARCH BAR */}
-      <Box
-        sx={{
-          width: '70%',
-          bgcolor: 'grey.100',
-          color: 'grey.800',
-          border: '1px solid',
-          borderColor: 'grey.300',
-          borderRadius: 2,
-          fontSize: '0.875rem',
-          fontWeight: '700',
-          textAlign: 'center',
-        }}
-        display='flex'
-        borderRadius='3px'
+    <div className='d-flex py-3 px-3 justify-content-between'>
+      <div
+        className='d-flex justify-content-between w-100 p-3'
+        style={{ backgroundColor: '#fff', borderRadius: '15px' }}
       >
-        <InputBase sx={{ ml: 2, flex: 2 }} placeholder='Search' />
-        <IconButton type='button' sx={{ p: 1 }}>
-          <SearchIcon />
-        </IconButton>
-      </Box>
-
-      {/* ICONS */}
-      <Box display='flex'>
-        <IconButton>
-          <NotificationsOutlinedIcon />
-        </IconButton>
-        <IconButton>
-          <SettingsOutlinedIcon />
-        </IconButton>
-        <IconButton>
-          <PersonOutlinedIcon />
-        </IconButton>
-      </Box>
-    </Box>
+        {/* SEARCH BAR */}
+        <Box
+          sx={{
+            width: '90%',
+            bgcolor: '#fff',
+            color: 'grey.800',
+            borderRadius: 2,
+            fontSize: '0.875rem',
+            fontWeight: '700',
+            textAlign: 'center',
+          }}
+          display='flex'
+          borderRadius='3px'
+        >
+          <IconButton type='button' sx={{ p: 1 }}>
+            <SearchIcon />
+          </IconButton>
+          <InputBase sx={{ ml: 2, flex: 2 }} placeholder='Search' />
+        </Box>
+        {/* ICONS */}
+        <Box display='flex'>
+          <IconButton>
+            <PersonOutlinedIcon />
+          </IconButton>
+        </Box>
+      </div>
+    </div>
   )
 }
 

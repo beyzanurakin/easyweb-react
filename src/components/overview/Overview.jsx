@@ -147,6 +147,7 @@ function Overview() {
                 <h4 className='m-0'>Sağlık Puanı</h4>
               </CardTitle>
               <GreenRadialBar />
+              <div className='py-4'></div>
               <BarChart />
             </CardBody>
           </Card>
@@ -181,15 +182,15 @@ function Overview() {
               </div>
               <div className='mt-3'>
                 <span className='me-4'>
-                  <BsFillCircleFill color='#14A44D' />
+                  <BsFillCircleFill className='me-2' color='#14A44D' />
                   Harika
                 </span>
                 <span className='me-4'>
-                  <BsFillCircleFill color='#E4A11B' />
+                  <BsFillCircleFill className='me-2' color='#E4A11B' />
                   İyileştirme Gerekiyor
                 </span>
                 <span className='me-4'>
-                  <BsFillCircleFill color='#DC4C64' />
+                  <BsFillCircleFill className='me-2' color='#DC4C64' />
                   Kötü
                 </span>
               </div>
@@ -238,7 +239,9 @@ function Overview() {
                     <h4>En Önemli Sorunlar</h4>
                   </Col>
                   <Col>
-                    <p className='text-end'>Tümünü Görüntüle(2.103)</p>
+                    <p className='text-end'>
+                      <a href='#'>Tümünü Görüntüle(2.103)</a>
+                    </p>
                   </Col>
                 </Row>
               </CardTitle>
@@ -282,6 +285,31 @@ function Overview() {
                       <span className='ms-3'>4XX GÖRSEL BULUNAMADI</span>
                     </td>{' '}
                     <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <RiCloseCircleLine size='25px' color='red' />
+                      <span className='ms-3'>
+                        ÖZDEŞ BAŞLIK VE H1 ETİKETLERİ
+                      </span>
+                    </td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <RiCloseCircleLine size='25px' color='red' />
+                      <span className='ms-3'>
+                        YİNELENEN SAYFA BAŞLIKLARINA SAHİP URL'LER
+                      </span>
+                    </td>{' '}
+                    <td>24</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <RiCloseCircleLine size='25px' color='red' />
+                      <span className='ms-3'>3XX GÖRSELLERİ</span>
+                    </td>{' '}
+                    <td>14</td>
                   </tr>
                 </tbody>
               </Table>

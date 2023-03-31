@@ -9,6 +9,8 @@ function StackedBar({ title, values }) {
         <Progress bar color='success' value={values[0]} />
         <Progress bar color='warning' value={values[1]} />
         <Progress bar color='danger' value={values[2]} />
+        <Progress bar color='info' value={values[3]} />
+        <Progress bar color='primary' value={values[4]} />
       </Progress>
     </div>
   )

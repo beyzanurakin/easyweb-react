@@ -32,7 +32,7 @@ function PillChart() {
       },
       plotOptions: {
         bar: {
-          borderRadius: 2,
+          borderRadius: 15,
           columnWidth: '50%',
           colors: {
             backgroundBarColors: [

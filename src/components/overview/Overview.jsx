@@ -1,9 +1,6 @@
 import React from 'react'
 import { Row, Col, Card, CardBody, CardTitle, Table } from 'reactstrap'
 import {
-  LineChart,
-  PieChart,
-  RadialBar,
   GreenRadialBar,
   AreaChart,
   BarChart,
@@ -12,11 +9,7 @@ import {
   ColumnChart,
 } from '../../charts'
 import { BsFillCircleFill } from 'react-icons/bs'
-import {
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCheckboxCircleLine,
-} from 'react-icons/ri'
+import { RiCloseCircleLine } from 'react-icons/ri'
 
 function Overview() {
   return (
@@ -205,7 +198,7 @@ function Overview() {
         </Col>
 
         <Col sm='2'>
-          <Card>
+          <Card className='mb-3'>
             <CardBody>
               <CardTitle className='m-0'>
                 <h4 className='m-0'>Taranan Sayfa Sayısı</h4>

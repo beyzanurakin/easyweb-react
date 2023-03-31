@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
-import { Outlet, NavLink as Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom'
 import { Form, Input } from 'reactstrap'
 
 function ProSidebar() {

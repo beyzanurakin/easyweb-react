@@ -72,7 +72,6 @@ function RadialBar() {
         options={parameters.options}
         series={parameters.series}
         type='radialBar'
-        height={150}
       />
     </div>
   )

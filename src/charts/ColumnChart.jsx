@@ -112,8 +112,6 @@ function ColumnChart() {
         options={parameters.options}
         series={parameters.series}
         type='bar'
-        height={150}
-        width={300}
       />
     </div>
   )

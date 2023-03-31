@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import DataTable from 'react-data-table-component'
 import { BiAperture } from 'react-icons/bi'
-import { Outlet, NavLink as Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom'
 
 import ReactPaginate from 'react-paginate'
 
@@ -10,7 +10,6 @@ import {
   CardBody,
   Row,
   Col,
-  NavLink,
   Nav,
   ButtonGroup,
   NavItem,
@@ -150,20 +149,10 @@ const data = [
     external_3xx_referring: 'https://paratik.net/hakkimizda',
   },
 ]
-const allFilters = ['all', 'errors', 'warnings', 'notifys', 'controls']
 
 function ScannedPages() {
-  const [results, setResults] = useState(data)
   const [active, setActive] = useState('1')
 
-  const filterResults = (filter) => {
-    if (filter === 'all') {
-      setResults(data)
-      return
-    }
-    const newResults = results.filter((result) => result.filter === filter)
-    setResults(newResults)
-  }
   return (
     <Fragment>
       <Row className='match-height'>

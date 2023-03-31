@@ -49,8 +49,6 @@ function PieChart() {
         options={paramaters.options}
         series={paramaters.series}
         type='donut'
-        height={150}
-        width={200}
       />
     </div>
   )

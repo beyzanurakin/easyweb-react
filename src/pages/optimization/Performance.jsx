@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   Row,
   Col,
@@ -7,22 +7,15 @@ import {
   CardTitle,
   Table,
   UncontrolledCollapse,
-  CardHeader,
 } from 'reactstrap'
 
 import tn from './tn.png'
 
 import PerformanceChart from '../../charts/PerformanceChart'
-import AccessibilityChart from '../../charts/AccessibilityChart'
-import BestAppsChart from '../../charts/BestAppsChart'
+
 import { BsFillCircleFill } from 'react-icons/bs'
 import { StackedBar } from '../../charts'
-import {
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCheckboxCircleLine,
-  RiExternalLinkFill,
-} from 'react-icons/ri'
+import { RiErrorWarningLine, RiExternalLinkFill } from 'react-icons/ri'
 
 function Performance() {
   return (

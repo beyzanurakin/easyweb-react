@@ -1,15 +1,10 @@
-import React, { useState } from 'react'
-import { Row, Col, Card, CardBody, CardTitle, Table } from 'reactstrap'
+import React from 'react'
+import { Row, Col, Card, CardBody, CardTitle } from 'reactstrap'
 import PerformanceChart from '../../charts/PerformanceChart'
 import AccessibilityChart from '../../charts/AccessibilityChart'
 import BestAppsChart from '../../charts/BestAppsChart'
 import { BsFillCircleFill } from 'react-icons/bs'
 import { StackedBar } from '../../charts'
-import {
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCheckboxCircleLine,
-} from 'react-icons/ri'
 
 function General() {
   return (

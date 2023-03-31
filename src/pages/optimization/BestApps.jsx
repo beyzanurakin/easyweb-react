@@ -277,7 +277,7 @@ function BestApps() {
                               </a>
                             </Col>
                             <Col sm='2'>
-                              <a href=''>
+                              <a href='#'>
                                 <RiExternalLinkFill />
                               </a>
                             </Col>
@@ -296,7 +296,7 @@ function BestApps() {
                               </a>
                             </Col>
                             <Col sm='2'>
-                              <a href=''>
+                              <a href='#'>
                                 <RiExternalLinkFill />
                               </a>
                             </Col>
@@ -315,7 +315,7 @@ function BestApps() {
                               </a>
                             </Col>
                             <Col sm='2'>
-                              <a href=''>
+                              <a href='#'>
                                 <RiExternalLinkFill />
                               </a>
                             </Col>

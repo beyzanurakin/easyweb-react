@@ -65,7 +65,7 @@ function Dashboard() {
           </Col>
         </Row>
       </Container>
-      <Container fluid className='mx-0 w-100'>
+      <Container fluid className='mx-0 w-100 pb-5'>
         <Outlet />
       </Container>
     </div>

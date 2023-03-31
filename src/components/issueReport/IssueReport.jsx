@@ -109,7 +109,7 @@ function IssueReport() {
           </ButtonGroup>
         </Col>
       </Row>
-      <Row>
+      <Row className='pb-5'>
         <Outlet />
       </Row>
     </div>

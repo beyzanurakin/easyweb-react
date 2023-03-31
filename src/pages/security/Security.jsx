@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   Nav,
   NavItem,
@@ -11,15 +11,10 @@ import {
   Progress,
   Table,
 } from 'reactstrap'
-import { Outlet, NavLink as Link } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom'
 import SingleHeatChart from '../../charts/SingleHeatChart'
 import LifeLineChart from '../../charts/LifeLineChart'
-import {
-  RiErrorWarningLine,
-  RiCloseCircleLine,
-  RiCheckboxCircleLine,
-  RiExternalLinkFill,
-} from 'react-icons/ri'
+import { RiErrorWarningLine, RiExternalLinkFill } from 'react-icons/ri'
 import HeatChart from '../../charts/HeatChart'
 
 function Security() {
